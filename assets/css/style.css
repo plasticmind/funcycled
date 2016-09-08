@@ -1,0 +1,101 @@
+/*
+Theme Name:     FunCycled Theme
+Theme URI:      http://funcycled.com
+Author:         Jesse Gardner
+Author URI:     http://plasticmind.com
+Template:     	storefront
+Description:  	Storefront child theme for Funcycled.com
+Version:      	1.0.0
+Text Domain:  	funcycled
+*/
+/*
+ * = Site Variables
+ */
+/*
+ * = Global
+ */
+body, button, input, select, textarea {
+  font-family: "Work Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+/*
+ * = Header
+ */
+.site-header .site-branding {
+  width: 180px; }
+  .site-header .site-branding .site-title a {
+    height: 45px;
+    width: 180px;
+    display: block;
+    text-indent: -999em;
+    background: transparent url(/wp-content/themes/funcycled/assets/images/logo-color.svg) no-repeat top left;
+    background-size: cover; }
+  .site-header .site-branding .site-description {
+    margin-top: 5px;
+    text-align: center; }
+
+.main-navigation ul li a {
+  font-weight: normal;
+  border-bottom: solid 1px #ddd; }
+  .main-navigation ul li a:before {
+    display: none; }
+
+button.menu-toggle {
+  top: 2px;
+  font-size: 80%; }
+
+/*
+ * = Images
+ */
+.site-main img {
+  margin: 1em 0; }
+
+/*
+ * = Comments
+ */
+.avatar {
+  display: none; }
+
+p.no-comments {
+  background-color: #28af90; }
+
+#comments .comment-list .comment-content {
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em; }
+
+/*
+ * = Responsive Breakpoints
+ */
+@media (min-width: 768px) {
+  /*
+   * = Header
+   */
+  .site-header .site-branding {
+    background-color: transparent;
+    width: 270px; }
+    .site-header .site-branding .site-title a {
+      height: 68px;
+      width: 270px;
+      display: block;
+      text-indent: -999em;
+      background: transparent url(/wp-content/themes/funcycled/assets/images/logo-color.svg) no-repeat top left;
+      background-size: cover; }
+
+  .storefront-primary-navigation {
+    background: transparent;
+    float: right;
+    clear: none;
+    width: 50%;
+    margin: 0;
+    padding: 0; }
+
+  .menu-item a {
+    font-weight: normal;
+    color: #423f47; }
+  .menu-item.current-menu-item a {
+    color: #28af90 !important; }
+
+  .nav-menu {
+    text-align: right; }
+
+  .main-navigation ul li a {
+    border: none; } }

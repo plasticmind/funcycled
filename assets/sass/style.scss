@@ -1,25 +1,146 @@
 /*
-Theme Name:     Storefront Child Theme
-Theme URI:      https://github.com/stuartduff/storefront-child-theme
-Author:         Stuart Duff
-Author URI:     http://stuartduff.com
+Theme Name:     FunCycled Theme
+Theme URI:      http://funcycled.com
+Author:         Jesse Gardner
+Author URI:     http://plasticmind.com
 Template:     	storefront
-Description:  	This is a blank child theme for WooThemes StoreFront theme
+Description:  	Storefront child theme for Funcycled.com
 Version:      	1.0.0
-License:      	GNU General Public License v2 or later
-License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:  	storefront
-Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
-Images License: GNU General Public License v2 or later
+Text Domain:  	funcycled
 */
 
 /*
- * Add your own custom css below this text.
+ * = Site Variables
  */
+
+// paths
+$theme_path: '/wp-content/themes/funcycled/';
+
+// colors
+$brand-blue:		#28af90;
+
+// layout sizes
+$desktop:			768px;
+$handheld:			568px;
+$container-width:	67.141em;
+
+/*
+ * = Global
+ */
+
+body,button,input,select,textarea{
+	font-family:"Work Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif
+}
+
+/*
+ * = Header
+ */
+
+.site-header .site-branding {
+	width: 180px;
+	.site-title a {
+		height: 45px;
+		width: 180px;
+		display: block;
+		text-indent: -999em;
+		background: transparent url(#{$theme_path}assets/images/logo-color.svg) no-repeat top left;
+		background-size: cover;
+	}
+	.site-description {
+		margin-top: 5px;
+		text-align: center;
+	}
+}
+
+.main-navigation ul li {
+    a {
+    	font-weight: normal;
+    	border-bottom: solid 1px #ddd;
+    	&:before {
+    		display: none;
+    	}
+    }
+}
+button.menu-toggle {
+	top: 2px;
+	font-size: 80%;
+}
+/*
+ * = Images
+ */
+
+.site-main img {
+	margin: 1em 0;
+}
+
+/*
+ * = Comments
+ */
+.avatar {
+	display:none;
+}
+p.no-comments {
+	background-color: $brand-blue;
+}
+#comments .comment-list .comment-content {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/*
+ * = Responsive Breakpoints
+ */
+
+@media (min-width: 420px) {
+
+
+
+}
+
+
+@media (min-width: $desktop) {
+
+/*
+ * = Header
+ */
+
+.site-header .site-branding {
+	background-color: transparent;
+	width: 270px;
+	.site-title a {
+		height: 68px;
+		width: 270px;
+		display: block;
+		text-indent: -999em;
+		background: transparent url(#{$theme_path}assets/images/logo-color.svg) no-repeat top left;
+		background-size: cover;
+	}
+}
+
+
+.storefront-primary-navigation {
+	background: transparent;
+	float: right;
+	clear: none;
+	width: 50%;
+	margin: 0;
+	padding: 0;
+}
+.menu-item {
+	a {
+		font-weight: normal;
+		color: #423f47;
+	}
+	&.current-menu-item a {
+		color: $brand-blue !important;
+	}
+}
+.nav-menu {
+	text-align: right;
+}
+.main-navigation ul li a {
+	border: none;
+}
+
+}
+
