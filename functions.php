@@ -107,7 +107,6 @@ function storefront_posted_on() {
  * Move product summary and additional information out of tabs
  */
 
-
 function pm_better_product_description_template() {
 	// Display summary
 	woocommerce_get_template( 'single-product/tabs/description.php' );
@@ -122,6 +121,25 @@ function pm_better_product_description_template() {
 add_action( 'woocommerce_single_product_summary', 'pm_better_product_description_template', 20 );
 add_filter( 'woocommerce_product_tabs', '__return_false' );
 
+/**
+ * Remove sidebar from product pages
+ */
 
+function pm_remove_storefront_sidebar() {
+    if ( is_product() ) {
+    remove_action( 'storefront_sidebar', 'storefront_get_sidebar', 10 );
+    }
+}
+add_action( 'get_header', 'pm_remove_storefront_sidebar' );
+
+/*
+function pm_body_class( $wp_classes, $extra_classes ) {
+	    $blacklist = array( 'right-sidebar' );
+		$wp_classes = array_diff( $wp_classes, $blacklist );
+	    // Add the extra classes back untouched
+	    return array_merge( $wp_classes, (array) $extra_classes );
+}
+add_filter( 'body_class', 'pm_body_class', 10, 2 );
+*/
 
 ?>
