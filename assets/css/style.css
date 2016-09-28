@@ -54,10 +54,18 @@ button.menu-toggle {
   .entry-title a,
   .page-title a {
     color: #43454b;
-    font-weight: thin; }
+    font-weight: 100;
+    transition: color 0.75s; }
+    .entry-title a:hover,
+    .page-title a:hover {
+      color: #28af90;
+      transition: color 0.25s; }
 
-.posted-on a {
-  text-decoration: none; }
+.hentry .entry-header {
+  border-bottom: none; }
+  .hentry .entry-header .byline a,
+  .hentry .entry-header .posted-on a {
+    text-decoration: none; }
 
 /*
  * = Images

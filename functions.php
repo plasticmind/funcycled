@@ -65,4 +65,37 @@ function pm_remove_storefront_handheld_footer_bar() {
   remove_action( 'storefront_footer', 'storefront_handheld_footer_bar', 999 );
 }
 
+/**
+ * Update posted on byline
+ */
+function storefront_posted_on() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+
+	$posted_on = sprintf(
+		_x( '%s', 'post date', 'storefront' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	echo wp_kses( apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
+		'span' => array(
+			'class'  => array(),
+		),
+		'a'    => array(
+			'href'  => array(),
+			'title' => array(),
+			'rel'   => array(),
+		),
+		'time' => array(
+			'datetime' => array(),
+			'class'    => array(),
+		),
+	) );
+}
+
+
 ?>

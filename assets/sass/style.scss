@@ -78,14 +78,24 @@ button.menu-toggle {
 	letter-spacing: -2px;
 	a {
 		color: $gray;
-		font-weight: thin;
+		font-weight: 100;
+		transition: color 0.75s;
+		&:hover {
+			color: $brand-blue;
+			transition: color 0.25s;
+		}
 	}
 }
-.posted-on {
-	a {
-		text-decoration: none;
+
+.hentry {
+	.entry-header {
+		border-bottom: none;
+		.byline a,
+		.posted-on a {
+			text-decoration: none;
+		}
 	}
-}
+} 
 
 /*
  * = Images
