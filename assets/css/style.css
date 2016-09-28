@@ -44,6 +44,22 @@ button.menu-toggle {
   font-size: 80%; }
 
 /*
+ * = Content
+ */
+.entry-title,
+.page-title {
+  font-size: 2.4em;
+  font-weight: 100;
+  letter-spacing: -2px; }
+  .entry-title a,
+  .page-title a {
+    color: #43454b;
+    font-weight: thin; }
+
+.posted-on a {
+  text-decoration: none; }
+
+/*
  * = Images
  */
 .site-main img {

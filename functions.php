@@ -50,14 +50,13 @@ function pm_storefront_credit() {
 		<a title="FunCycled on Pinterest" href="https://pinterest.com/funcycled/" class="fa fa-pinterest fa-lg" target="_blank"></a>
 		<a title="FunCycled on Instagram" href="https://instagram.com/funcycled/" class="fa fa-instagram fa-lg" target="_blank"></a>
 
-		&nbsp;&nbsp;&nbsp; &copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?> &nbsp;&nbsp;&nbsp; <em>Ilium fuit, Troja est.</em>
-			
+		&nbsp;&nbsp;&nbsp; &copy; <?php echo get_bloginfo( 'name' ) . ' 2012-' . date( 'Y' ); ?> &nbsp;&nbsp;&nbsp; <em>Ilium fuit, Troja est.</em>
 	</div><!-- .site-info -->
 	<?php
 }
 
 /**
- * Remove Storefront handheld fppter bar
+ * Remove Storefront handheld footer bar
  */
 
 add_action( 'init', 'pm_remove_storefront_handheld_footer_bar' );

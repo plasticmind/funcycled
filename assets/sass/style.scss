@@ -18,6 +18,7 @@ $theme_path: '/wp-content/themes/funcycled/';
 
 // colors
 $brand-blue:		#28af90;
+$gray: 				#43454b;
 
 // layout sizes
 $desktop:			768px;
@@ -65,6 +66,27 @@ button.menu-toggle {
 	top: 2px;
 	font-size: 80%;
 }
+
+/*
+ * = Content
+ */
+
+.entry-title,
+.page-title {
+	font-size: 2.4em;
+	font-weight: 100;
+	letter-spacing: -2px;
+	a {
+		color: $gray;
+		font-weight: thin;
+	}
+}
+.posted-on {
+	a {
+		text-decoration: none;
+	}
+}
+
 /*
  * = Images
  */
@@ -76,6 +98,7 @@ button.menu-toggle {
 /*
  * = Comments
  */
+
 .avatar {
 	display:none;
 }
