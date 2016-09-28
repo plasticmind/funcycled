@@ -25,12 +25,15 @@ $desktop:			768px;
 $handheld:			568px;
 $container-width:	67.141em;
 
+// fonts
+$font-serif: "Work Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+
 /*
  * = Global
  */
 
 body,button,input,select,textarea{
-	font-family:"Work Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif
+	font-family:$font-serif;
 }
 
 /*
@@ -96,6 +99,40 @@ button.menu-toggle {
 		}
 	}
 } 
+
+/*
+ * = Product Inquiry Plugin
+ */
+
+input.wpi-button {
+    border: 0 !important;
+    background: $gray !important;
+    color: #fff !important;
+    padding: 0.6180469716em 1.41575em !important;
+    border-radius: 0 !important;
+    &:hover {
+    	background: darken($gray,5%) !important;
+    }
+}
+.wdm-enquiry-modal {
+	font-size: 1.5em !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	.contact-bottom {
+		display: none;
+	}
+}
+.ui-widget {
+	font-family: $font-serif !important;
+	input,select,textarea,button {
+		font-family: $font-serif !important;
+		font-size: 0.7em !important;
+		border-radius: 0 !important;
+	}
+	.ui-widget-content label{
+		font-size: 0.7em !important;
+	}
+}
 
 /*
  * = Images

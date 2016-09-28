@@ -31,7 +31,6 @@ function pm_register_stylesheet() {
     wp_enqueue_style( 'funcycled-styles', get_stylesheet_directory_uri().'/assets/css/style.css');
 }
 add_action( 'wp_enqueue_scripts', 'pm_register_stylesheet',999999999);
-//add_action('woo_head', 'pm_register_stylesheet', 99);
 
 
 /**
