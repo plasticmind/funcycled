@@ -99,6 +99,15 @@ button.menu-toggle {
 		}
 	}
 } 
+.summary h2 {
+	display: none;
+}
+.single-product div.product .price {
+    font-size: 1.4em;
+}
+.dimensions {
+	font-size: 1.2em;
+}
 
 /*
  * = Product Inquiry Plugin

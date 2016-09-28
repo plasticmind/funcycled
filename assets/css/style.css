@@ -67,6 +67,15 @@ button.menu-toggle {
   .hentry .entry-header .posted-on a {
     text-decoration: none; }
 
+.summary h2 {
+  display: none; }
+
+.single-product div.product .price {
+  font-size: 1.4em; }
+
+.dimensions {
+  font-size: 1.2em; }
+
 /*
  * = Product Inquiry Plugin
  */
