@@ -98,6 +98,9 @@ button.menu-toggle {
 			text-decoration: none;
 		}
 	}
+	.entry-content {
+		letter-spacing: -1px;
+	}
 } 
 .summary h2 {
 	display: none;
@@ -109,10 +112,69 @@ button.menu-toggle {
 	font-size: 1.2em;
 }
 
-.single-product.right-sidebar .content-area {
+/*
+ * = Related
+ */
+
+.related {
+	clear:both;
+	border-top: dashed 1px lighten($gray,55%);
+	padding-top: 1em;
+}
+
+/*
+ * = Archive Lists
+ */
+
+.archive article {
+    display: inline-block;
+    width: 31%;
+    border: solid 1px lighten($gray,60%);
+    border-radius: 3px;
+    padding: 15px;
+    margin: 0 15px 22px 0;
+    vertical-align: top;
+    .featured-image {
+    	margin: -16px -16px 15px -16px;
+    }
+    img {
+    	width: 100%;
+    	margin: 0;
+    	border-bottom-right-radius: 0;
+    	border-bottom-left-radius: 0;
+    }
+    .entry-header {
+    	font-size: 0.6em;
+    }
+    .summary {
+    	letter-spacing: -1px;
+    	font-weight: normal;
+    	color: $gray;
+    }
+}
+
+/*
+ * = Sidebar
+ */
+
+.archive.right-sidebar .content-area,
+.woocommerce.right-sidebar .content-area {
   float: none;
   margin-right: 0;
   width: 100%;
+}
+.single-product div.product .images .thumbnails a.zoom {
+    display: block;
+    width: 22.05%;
+    margin-right: 3.8%;
+}
+
+/*
+ * = Hide title from lightbox
+ */
+
+body.single-product .ppt, body.single-product .pp_description {
+display: none !important;
 }
 
 /*
@@ -125,6 +187,7 @@ input.wpi-button {
     color: #fff !important;
     padding: 0.6180469716em 1.41575em !important;
     border-radius: 0 !important;
+    font-size: 1.2em !important;
     &:hover {
     	background: darken($gray,5%) !important;
     }
@@ -170,6 +233,9 @@ p.no-comments {
 #comments .comment-list .comment-content {
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
+}
+.comments-area {
+	letter-spacing: -1px;
 }
 
 /*

@@ -25,12 +25,19 @@ add_action( 'wp_enqueue_scripts', 'pm_replace_fonts', 999 );
 
 
 /**
- * Register our theme stylesheet
+ * Register our theme stylesheet and relevant scripts
  */
-function pm_register_stylesheet() {
+function pm_register_stylesheets() {
     wp_enqueue_style( 'funcycled-styles', get_stylesheet_directory_uri().'/assets/css/style.css');
 }
-add_action( 'wp_enqueue_scripts', 'pm_register_stylesheet',999999999);
+add_action( 'wp_enqueue_scripts', 'pm_register_stylesheets', 999 );
+
+function pm_register_scripts() {
+    wp_enqueue_script( 'funcycled-scripts', get_stylesheet_directory_uri().'/assets/js/tools.min.js');
+    wp_enqueue_script( 'jquery-masonry' );
+}
+add_action( 'wp_enqueue_scripts', 'pm_register_scripts', 999 );
+
 
 
 /**
@@ -122,11 +129,25 @@ add_action( 'woocommerce_single_product_summary', 'pm_better_product_description
 add_filter( 'woocommerce_product_tabs', '__return_false' );
 
 /**
+ * Change Related Products wording
+ *
+ */
+function pm_text_strings( $translated_text, $text, $domain ) {
+	switch ( $translated_text ) {
+		case 'Related Products' :
+			$translated_text = __( 'You might also like...', 'woocommerce' );
+			break;
+	}
+	return $translated_text;
+}
+add_filter( 'gettext', 'pm_text_strings', 20, 3 );
+
+/**
  * Remove sidebar from product pages
  */
 
 function pm_remove_storefront_sidebar() {
-    if ( is_product() ) {
+    if ( is_woocommerce() || is_archive() ) {
     remove_action( 'storefront_sidebar', 'storefront_get_sidebar', 10 );
     }
 }
