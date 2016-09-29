@@ -1,21 +1,16 @@
-<?php 
-
-/* Summary Template */ 
-
-?>
-
 <article>
 
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" itemprop="url">
-
-	
-		<div class="featured-image">
-			<?php 
-				if (has_post_thumbnail()) {
-					the_post_thumbnail('medium');
-				}
-			?>
-		</div>							
+		
+		<?php 
+			if (has_post_thumbnail()) {
+				echo '<div class="featured-image">';
+				the_post_thumbnail('medium');
+				echo '</div>';
+			} else {
+				echo '<div class="featured-image empty"></div>';
+			}
+		?>
 	 
 
 		<header class="entry-header">

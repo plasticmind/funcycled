@@ -8,11 +8,13 @@ var msnry = new Masonry( elem, {
   columnWidth: 200
 });
 */
-/*
-jQuery('.archive').masonry({
+
+
+jQuery('.archive .archive-list').masonry({
   // options
-  itemSelector: 'article',
-  columnWidth: 200
+  itemSelector: 'article'
+  //columnWidth: 200
 });
-*/
+
+
 });

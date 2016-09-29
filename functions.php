@@ -153,14 +153,15 @@ function pm_remove_storefront_sidebar() {
 }
 add_action( 'get_header', 'pm_remove_storefront_sidebar' );
 
-/*
-function pm_body_class( $wp_classes, $extra_classes ) {
-	    $blacklist = array( 'right-sidebar' );
-		$wp_classes = array_diff( $wp_classes, $blacklist );
-	    // Add the extra classes back untouched
-	    return array_merge( $wp_classes, (array) $extra_classes );
+/**
+ * Adjust # of results on archive pages
+ */
+
+function pm_archive_query( $query ) {
+if ( $query->is_archive() && $query->is_main_query() && !is_admin() ) {
+        $query->set( 'posts_per_page', 25 );
+    }
 }
-add_filter( 'body_class', 'pm_body_class', 10, 2 );
-*/
+add_action( 'pre_get_posts', 'pm_archive_query' );
 
 ?>
