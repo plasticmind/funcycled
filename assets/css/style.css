@@ -125,6 +125,51 @@ button.menu-toggle {
   width: 22.05%;
   margin-right: 3.8%; }
 
+.about-widget .profile-image img {
+  margin: 0 auto;
+  border-radius: 50%; }
+.about-widget .widget-title {
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+  font-weight: 700; }
+.about-widget .welcome-text {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.2em; }
+.about-widget .social-links {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 1.5em;
+  padding-top: 1.2em;
+  margin-bottom: 1em; }
+  .about-widget .social-links li {
+    display: inline-block;
+    width: 31%; }
+  .about-widget .social-links a {
+    text-decoration: none !important;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    transition: color 1s; }
+    .about-widget .social-links a span {
+      display: none; }
+    .about-widget .social-links a:hover {
+      transition: color 0.25s;
+      color: #28af90; }
+.about-widget .email-subscribe {
+  margin-top: 2em; }
+  .about-widget .email-subscribe p {
+    text-align: center; }
+  .about-widget .email-subscribe .field-holder input {
+    width: 100%;
+    color: #d1d2d6; }
+    .about-widget .email-subscribe .field-holder input:focus {
+      color: black; }
+
+.page-about .welcome-text, .page-about .profile-image {
+  display: none; }
+
 /*
  * = Product Category Sidebar
  */

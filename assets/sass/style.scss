@@ -170,6 +170,70 @@ button.menu-toggle {
     margin-right: 3.8%;
 }
 
+// Widget: About
+
+.about-widget {
+	.profile-image {
+		img{
+			margin: 0 auto;
+			border-radius: 50%;
+		}
+	}
+	.widget-title {
+		border: 0;
+	    padding: 0;
+	    margin-bottom: 0;
+	    font-weight: 700;
+	}
+	.welcome-text {
+		margin-top: 1em;
+		text-align: center;
+		font-size: 1.2em;
+	}
+	.social-links {
+		border-top: 1px solid rgba(0,0,0,.05);
+		border-bottom: 1px solid rgba(0,0,0,.05);
+		margin-top: 1.5em;
+		padding-top: 1.2em;
+		margin-bottom: 1em;
+		li {
+			display: inline-block;
+			width: 31%;
+		}
+		a {
+			text-decoration: none !important;
+			font-size: 3em;
+			width: 100%;
+			text-align: center;
+			transition: color 1s;
+			span {
+				display: none;
+			}
+			&:hover {
+				transition: color 0.25s;
+				color: $brand-blue;
+			}
+		}
+	}
+	.email-subscribe {
+		margin-top: 2em;
+		p {
+			text-align: center;
+		}
+		.field-holder input {
+			width: 100%;
+			color: $light-gray;
+			&:focus {
+				color: black;
+			}
+		}
+	}
+		
+}
+.page-about .welcome-text, .page-about .profile-image {
+	display: none;
+}
+
 /*
  * = Product Category Sidebar
  */

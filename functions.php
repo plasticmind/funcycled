@@ -10,6 +10,13 @@
  * as the sf_child_theme_dequeue_style() function declaration.
  */
 
+
+/**
+ * Load widget
+ */
+
+require_once ( get_stylesheet_directory() . '/lib/widgets.php' );
+
 /**
  * Replace Storefront parent theme Google fonts with custom child theme fonts
  */
@@ -241,4 +248,16 @@ add_filter( "woocommerce_catalog_orderby", "pm_woocommerce_product_sorting", 20 
 
 add_filter( 'woocommerce_show_page_title', '__return_false' );
 
+/**
+ * Add page slug to body class
+*/
+
+function pm_add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'pm_add_slug_body_class' );
 ?>
