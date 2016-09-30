@@ -164,4 +164,81 @@ if ( $query->is_archive() && $query->is_main_query() && !is_admin() ) {
 }
 add_action( 'pre_get_posts', 'pm_archive_query' );
 
+/**
+ * Show product categories in sidebar of shop pages
+ */
+
+function pm_product_subcategories() {
+	if (!is_product()) {
+
+		$terms = get_terms( 'product_cat' );
+		if(is_tax()) {
+			$this_term_id = get_queried_object()->term_id;;
+		}
+
+		if ( $terms ) {
+			echo '<div class="product-cats">';
+			echo '<h2>Categories</h2>';
+			echo '<ul>';
+			 
+		    foreach ( $terms as $term ) {
+		              
+		        echo '<li class="category">';                 
+	                echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug .(($this_term_id == $term->term_id)?' current':''). '">';
+	                    echo $term->name;
+	                echo '</a>';           
+		        echo '</li>';
+
+			}
+			 
+			echo '</ul>';
+
+			echo '<select style="display:none;">';
+			 
+		    foreach ( $terms as $term ) {
+		                     
+		        echo '<option selected="selected">Select a Category...</option>';
+	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
+	            	echo $term->name;
+	            echo '</option>';
+
+			}
+			 
+			echo '</select>';
+
+			echo '</div>';
+		} 
+
+	}
+
+}
+add_action( 'woocommerce_before_main_content', 'pm_product_subcategories', 1 );
+
+/**
+ * Customize the default sorting dropdown
+*/
+  
+function pm_remove_bottom_sorting() {
+remove_action( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
+remove_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
+}
+add_action('init','pm_remove_bottom_sorting');
+
+function pm_woocommerce_product_sorting( $orderby ) {
+  // The following removes the rating, date, and the popularity sorting options;
+  // feel free to customize and enable/disable the options as needed. 
+  unset($orderby["rating"]);
+  //unset($orderby["date"]);
+  unset($orderby["popularity"]);
+  return $orderby;
+}
+add_filter( "woocommerce_catalog_orderby", "pm_woocommerce_product_sorting", 20 );
+
+
+/**
+ * Removes the "shop" title on the main shop page
+*/
+
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+
 ?>

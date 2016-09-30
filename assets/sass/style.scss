@@ -19,6 +19,7 @@ $theme_path: '/wp-content/themes/funcycled/';
 // colors
 $brand-blue:		#28af90;
 $gray: 				#43454b;
+$light-gray:		#d1d2d6;
 
 // layout sizes
 $desktop:			768px;
@@ -170,6 +171,43 @@ button.menu-toggle {
 }
 
 /*
+ * = Product Category Sidebar
+ */
+
+.woocommerce {
+	.product-cats {
+	    h2 {
+	    	display: none;
+	    }
+	    ul {
+	    	list-style: none;
+	    	padding: 0;
+	    	margin: 0 0 1em;
+	    	display: none;
+	    }
+	    li {
+	    	font-size: 1.1em;
+	    }
+	    a {
+	    	font-weight: 100;
+	    }
+	    select {
+	    	display: block !important;
+	    	margin-bottom: 1em;
+	    }
+	    .current {
+	    	font-weight: bold;
+	    }
+	}
+}
+.woocommerce-ordering select,
+.product-cats select {
+	font-size: 14px;
+	border: 1px solid #ccc;
+	height: 30px;
+}
+
+/*
  * = Hide title from lightbox
  */
 
@@ -292,6 +330,36 @@ p.no-comments {
 .main-navigation ul li a {
 	border: none;
 }
+
+
+.woocommerce {
+	.product-cats {
+	    width: 17%;
+	    float: left;
+	    border-right: solid 1px $light-gray;
+	    margin-right: 2em;
+	    padding-right: 0px;
+	    ul {
+	    	display: block;
+	    }
+	    li {
+	    	padding: 0 1em 1em 0;
+	    	text-align: right;
+	    }
+	    select {
+	    	display: none !important;
+	    }
+	}
+	.site-main {
+	    width: 75%;
+	    float: left;
+	}
+}
+.single-product .site-main {
+    width: 100%;
+    float: none;
+}
+
 
 }
 

@@ -34,7 +34,7 @@ get_header(); ?>
 			endwhile;
 
 			echo '</div>';
-			
+
 			do_action( 'storefront_loop_after' );
 
 		else :
