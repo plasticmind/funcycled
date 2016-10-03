@@ -249,6 +249,7 @@ button.menu-toggle {
     }
     a {
     	font-weight: 100;
+		padding: 6px 10px;
     }
     select {
     	display: block !important;
@@ -256,6 +257,8 @@ button.menu-toggle {
     }
     .current {
     	font-weight: bold;
+		color: white;
+		background-color: $brand-blue;
     }
 }
 .woocommerce-ordering select,
@@ -425,6 +428,9 @@ p.no-comments {
 	    width: calc(33% - 10px);
 		margin-right: 10px;
 	}
+}
+.category .page-title {
+	display: none;
 }
 .page-portfolio .site-main,
 .page-portfolio .content-area,

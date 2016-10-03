@@ -179,12 +179,15 @@ button.menu-toggle {
 .product-cats li {
   font-size: 1.1em; }
 .product-cats a {
-  font-weight: 100; }
+  font-weight: 100;
+  padding: 6px 10px; }
 .product-cats select {
   display: block !important;
   margin-bottom: 1em; }
 .product-cats .current {
-  font-weight: bold; }
+  font-weight: bold;
+  color: white;
+  background-color: #28af90; }
 
 .woocommerce-ordering select,
 .product-cats select {
@@ -312,6 +315,9 @@ p.no-comments {
     .archive-list article {
       width: calc(33% - 10px);
       margin-right: 10px; }
+
+  .category .page-title {
+    display: none; }
 
   .page-portfolio .site-main,
   .page-portfolio .content-area,

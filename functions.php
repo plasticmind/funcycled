@@ -202,7 +202,7 @@ function pm_product_category_sidebar() {
 
 			echo '<select style="display:none;">';
 			echo '<option selected="selected">Filter by Category...</option>';
-			
+
 		    foreach ( $terms as $term ) {
 		                     
 	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
@@ -231,8 +231,10 @@ function pm_blog_category_sidebar() {
 
 		$terms = get_categories();
 		if(is_category()) {
-			$this_cat_id = get_queried_object()->term_id;;
+			$this_term_id = get_queried_object()->term_id;
 		}
+
+		echo $this_cat_id;
 
 		if ( $terms ) {
 			echo '<div class="product-cats">';
