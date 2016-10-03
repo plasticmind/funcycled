@@ -79,7 +79,7 @@ button.menu-toggle {
 .page-title {
 	font-size: 2.4em;
 	font-weight: 100;
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 	a {
 		color: $gray;
 		font-weight: 100;
@@ -98,9 +98,6 @@ button.menu-toggle {
 		.posted-on a {
 			text-decoration: none;
 		}
-	}
-	.entry-content {
-		letter-spacing: -1px;
 	}
 } 
 .summary h2 {
@@ -127,13 +124,12 @@ button.menu-toggle {
  * = Archive Lists
  */
 
-.archive article {
+.archive-list article {
     display: inline-block;
-    width: 31%;
     border: solid 1px lighten($gray,60%);
     border-radius: 3px;
     padding: 15px;
-    margin: 0 15px 20px 0;
+    margin: 0 0 10px 0;
     vertical-align: top;
     .featured-image {
     	margin: -16px -16px 15px -16px;
@@ -148,7 +144,6 @@ button.menu-toggle {
     	font-size: 0.6em;
     }
     .summary {
-    	letter-spacing: -1px;
     	font-weight: normal;
     	color: $gray;
     }
@@ -235,34 +230,33 @@ button.menu-toggle {
 }
 
 /*
- * = Product Category Sidebar
+ * = Category Sidebar
  */
 
-.woocommerce {
-	.product-cats {
-	    h2 {
-	    	display: none;
-	    }
-	    ul {
-	    	list-style: none;
-	    	padding: 0;
-	    	margin: 0 0 1em;
-	    	display: none;
-	    }
-	    li {
-	    	font-size: 1.1em;
-	    }
-	    a {
-	    	font-weight: 100;
-	    }
-	    select {
-	    	display: block !important;
-	    	margin-bottom: 1em;
-	    }
-	    .current {
-	    	font-weight: bold;
-	    }
-	}
+
+.product-cats {
+    h2 {
+    	display: none;
+    }
+    ul {
+    	list-style: none;
+    	padding: 0;
+    	margin: 0 0 1em;
+    	display: none;
+    }
+    li {
+    	font-size: 1.1em;
+    }
+    a {
+    	font-weight: 100;
+    }
+    select {
+    	display: block !important;
+    	margin-bottom: 1em;
+    }
+    .current {
+    	font-weight: bold;
+    }
 }
 .woocommerce-ordering select,
 .product-cats select {
@@ -336,9 +330,6 @@ p.no-comments {
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
 }
-.comments-area {
-	letter-spacing: -1px;
-}
 
 /*
  * = Responsive Breakpoints
@@ -357,17 +348,26 @@ p.no-comments {
  * = Header
  */
 
-.site-header .site-branding {
-	background-color: transparent;
-	width: 270px;
-	.site-title a {
-		height: 68px;
+.site-header {
+	.site-branding {
+		background-color: transparent;
 		width: 270px;
-		display: block;
-		text-indent: -999em;
-		background: transparent url(#{$theme_path}assets/images/logo-color.svg) no-repeat top left;
-		background-size: cover;
-	}
+		.site-title a {
+			height: 68px;
+			width: 270px;
+			display: block;
+			text-indent: -999em;
+			background: transparent url(#{$theme_path}assets/images/logo-color.svg) no-repeat top left;
+			background-size: cover;
+		}
+	}	
+	.main-navigation {
+		width: 100% !important;
+		a {
+			padding-left: 0.5em !important;
+			padding-right: 0.5em !important;
+		}
+	} 
 }
 
 
@@ -378,6 +378,9 @@ p.no-comments {
 	width: 50%;
 	margin: 0;
 	padding: 0;
+}
+.primary-navigation {
+	float: right;
 }
 .menu-item {
 	a {
@@ -396,34 +399,51 @@ p.no-comments {
 }
 
 
-.woocommerce {
-	.product-cats {
-	    width: 17%;
-	    float: left;
-	    border-right: solid 1px $light-gray;
-	    margin-right: 2em;
-	    padding-right: 0px;
-	    ul {
-	    	display: block;
-	    }
-	    li {
-	    	padding: 0 1em 1em 0;
-	    	text-align: right;
-	    }
-	    select {
-	    	display: none !important;
-	    }
+
+.product-cats {
+    width: 17%;
+    float: left;
+    border-right: solid 1px $light-gray;
+    //margin-right: 2em;
+    padding-right: 0px;
+    ul {
+    	display: block;
+    }
+    li {
+    	padding: 0 1em 1em 0;
+    	text-align: right;
+    }
+    select {
+    	display: none !important;
+    }
+}
+.archive-list {
+	width: 80%;
+	float: right;
+	clear: none;
+	article {
+	    width: calc(33% - 10px);
+		margin-right: 10px;
 	}
-	.site-main {
-	    width: 75%;
-	    float: left;
-	}
+}
+.page-portfolio .site-main,
+.page-portfolio .content-area,
+.category .site-main,
+.category .content-area {
+	width: 100%;
+	float: left;
+}
+.page-portfolio .site-main,
+.category .site-main {
+    float: left;
 }
 .single-product .site-main {
     width: 100%;
     float: none;
 }
-
+.navigation {
+	clear: both;
+}
 
 }
 

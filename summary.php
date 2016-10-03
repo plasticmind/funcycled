@@ -5,7 +5,7 @@
 		<?php 
 			if (has_post_thumbnail()) {
 				echo '<div class="featured-image">';
-				the_post_thumbnail('medium');
+				the_post_thumbnail('large');
 				echo '</div>';
 			} else {
 				echo '<div class="featured-image empty"></div>';

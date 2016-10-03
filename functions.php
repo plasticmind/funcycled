@@ -175,7 +175,7 @@ add_action( 'pre_get_posts', 'pm_archive_query' );
  * Show product categories in sidebar of shop pages
  */
 
-function pm_product_subcategories() {
+function pm_product_category_sidebar() {
 	if (!is_product()) {
 
 		$terms = get_terms( 'product_cat' );
@@ -201,10 +201,10 @@ function pm_product_subcategories() {
 			echo '</ul>';
 
 			echo '<select style="display:none;">';
-			 
+			echo '<option selected="selected">Filter by Category...</option>';
+			
 		    foreach ( $terms as $term ) {
 		                     
-		        echo '<option selected="selected">Select a Category...</option>';
 	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
 	            	echo $term->name;
 	            echo '</option>';
@@ -219,7 +219,58 @@ function pm_product_subcategories() {
 	}
 
 }
-add_action( 'woocommerce_before_main_content', 'pm_product_subcategories', 1 );
+add_action( 'woocommerce_before_main_content', 'pm_product_category_sidebar', 1 );
+
+
+/**
+ * Show blog categories in sidebar of portfolio / taxonomy pages
+ */
+
+function pm_blog_category_sidebar() {
+	if (is_category()||is_page()) {
+
+		$terms = get_categories();
+		if(is_category()) {
+			$this_cat_id = get_queried_object()->term_id;;
+		}
+
+		if ( $terms ) {
+			echo '<div class="product-cats">';
+			echo '<h2>Categories</h2>';
+			echo '<ul>';
+			 
+		    foreach ( $terms as $term ) {
+		              
+		        echo '<li class="category">';                 
+	                echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug .(($this_term_id == $term->term_id)?' current':''). '">';
+	                    echo $term->name;
+	                echo '</a>';           
+		        echo '</li>';
+
+			}
+			 
+			echo '</ul>';
+
+			echo '<select style="display:none;">';
+			echo '<option selected="selected">Filter by Category...</option>';
+
+		    foreach ( $terms as $term ) {
+		                     
+	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
+	            	echo $term->name;
+	            echo '</option>';
+
+			}
+			 
+			echo '</select>';
+
+			echo '</div>';
+		} 
+
+	}
+
+}
+add_action( 'storefront_loop_before', 'pm_blog_category_sidebar' );
 
 /**
  * Customize the default sorting dropdown

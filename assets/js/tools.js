@@ -9,12 +9,10 @@ var msnry = new Masonry( elem, {
 });
 */
 
-
-jQuery('.archive .archive-list').masonry({
+jQuery('.archive-list').masonry({
   // options
   itemSelector: 'article'
   //columnWidth: 200
 });
-
 
 });
