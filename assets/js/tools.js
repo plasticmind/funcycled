@@ -15,4 +15,19 @@ jQuery('.archive-list').masonry({
   //columnWidth: 200
 });
 
+
+jQuery(function(){
+  // bind change event to select
+  jQuery('.product-cats select').on('change', function () {
+      var url = jQuery(this).val(); // get selected value
+      if (url) { // require a URL
+          window.location = url; // redirect
+      }
+      return false;
+  });
+});
+
+
+
+
 });

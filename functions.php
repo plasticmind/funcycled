@@ -205,7 +205,7 @@ function pm_product_category_sidebar() {
 
 		    foreach ( $terms as $term ) {
 		                     
-	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
+	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug .'"'.(($this_term_id == $term->term_id)?'" selected':''). '>';
 	            	echo $term->name;
 	            echo '</option>';
 
@@ -258,7 +258,7 @@ function pm_blog_category_sidebar() {
 
 		    foreach ( $terms as $term ) {
 		                     
-	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
+	            echo '<option value="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug .'"'.(($this_term_id == $term->term_id)?'" selected':''). '>';
 	            	echo $term->name;
 	            echo '</option>';
 
