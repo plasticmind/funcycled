@@ -227,7 +227,7 @@ add_action( 'woocommerce_before_shop_loop', 'pm_product_category_sidebar', 1 );
  */
 
 function pm_blog_category_sidebar() {
-	if (is_category()||is_page()) {
+	if (is_category()||is_page('portfolio')) {
 
 		$terms = get_categories();
 		if(is_category()) {

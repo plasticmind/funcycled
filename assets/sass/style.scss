@@ -372,7 +372,22 @@ p.no-comments {
 		}
 	} 
 }
-
+.home.page {
+	.site-header {
+		margin-bottom:0 !important;
+	}
+	.site-header .site-branding {
+   		margin-bottom: 1.5em;
+  	}
+  	.content-area {
+  		width: 100%;
+  		float: none;
+  		margin-right: 0;
+  	}
+  	.hero img {
+		width: 100%;
+  	}
+}
 
 .storefront-primary-navigation {
 	background: transparent;

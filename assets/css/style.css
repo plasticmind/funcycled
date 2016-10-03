@@ -272,6 +272,17 @@ p.no-comments {
       padding-left: 0.5em !important;
       padding-right: 0.5em !important; }
 
+  .home.page .site-header {
+    margin-bottom: 0 !important; }
+  .home.page .site-header .site-branding {
+    margin-bottom: 1.5em; }
+  .home.page .content-area {
+    width: 100%;
+    float: none;
+    margin-right: 0; }
+  .home.page .hero img {
+    width: 100%; }
+
   .storefront-primary-navigation {
     background: transparent;
     float: right;
