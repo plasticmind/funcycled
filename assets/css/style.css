@@ -303,7 +303,9 @@ p.no-comments {
     .product-cats ul {
       display: block; }
     .product-cats li {
-      padding: 0 1em 1em 0;
+      padding: 0 0.5em 0.5em 0; }
+    .product-cats a {
+      display: block;
       text-align: right; }
     .product-cats select {
       display: none !important; }
@@ -316,8 +318,17 @@ p.no-comments {
       width: calc(33% - 10px);
       margin-right: 10px; }
 
+  ul.products {
+    width: 80%;
+    float: right;
+    clear: none !important; }
+
   .category .page-title {
     display: none; }
+
+  .storefront-sorting {
+    overflow: hidden;
+    padding-left: 2em; }
 
   .page-portfolio .site-main,
   .page-portfolio .content-area,

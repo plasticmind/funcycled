@@ -401,8 +401,6 @@ p.no-comments {
 	border: none;
 }
 
-
-
 .product-cats {
     width: 17%;
     float: left;
@@ -413,7 +411,10 @@ p.no-comments {
     	display: block;
     }
     li {
-    	padding: 0 1em 1em 0;
+    	padding: 0 0.5em 0.5em 0;
+    }
+    a {
+    	display: block;
     	text-align: right;
     }
     select {
@@ -429,8 +430,17 @@ p.no-comments {
 		margin-right: 10px;
 	}
 }
+ul.products {
+	width: 80%;
+	float: right;
+	clear: none !important;
+}
 .category .page-title {
 	display: none;
+}
+.storefront-sorting {
+	overflow: hidden;
+	padding-left: 2em;
 }
 .page-portfolio .site-main,
 .page-portfolio .content-area,

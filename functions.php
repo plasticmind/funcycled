@@ -219,7 +219,7 @@ function pm_product_category_sidebar() {
 	}
 
 }
-add_action( 'woocommerce_before_main_content', 'pm_product_category_sidebar', 1 );
+add_action( 'woocommerce_before_shop_loop', 'pm_product_category_sidebar', 1 );
 
 
 /**
