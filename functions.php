@@ -315,12 +315,5 @@ function pm_add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'pm_add_slug_body_class' );
 
 
-function pm_change_translate_text( $translated_text ) {
-	if ( $translated_text == 'Send Enquiry for' ) {
-		$translated_text = 'I want';
-	}
-	return $translated_text;
-}
-add_filter( 'gettext', 'pm_change_translate_text', 20 );
 
 ?>
