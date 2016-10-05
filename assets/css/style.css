@@ -46,6 +46,10 @@ button.menu-toggle {
 .home header#masthead {
   margin-bottom: 0 !important; }
 
+.woocommerce-breadcrumb,
+#reviews .commentlist li .comment_container {
+  background-color: #f8f8f8 !important; }
+
 /*
  * = Footer
  */
