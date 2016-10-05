@@ -286,12 +286,9 @@ input.wpi-button {
   .wdm-modal-content .contact-bottom {
     display: none; }
   .wdm-modal-content .wdm-modal-title span {
-    /*
-    display: none;
-    &.pr_name {
-    	display: block;
-    }
-    */ }
+    display: none; }
+    .wdm-modal-content .wdm-modal-title span.pr_name {
+      display: block; }
 
 .wdm-modal-body {
   padding: 20px 0 10px !important; }
