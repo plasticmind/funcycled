@@ -279,12 +279,22 @@ input.wpi-button {
   input.wpi-button:hover {
     background: #37393e !important; }
 
-.wdm-enquiry-modal {
+.wdm-modal-content {
   font-size: 1.5em !important;
   border: 0 !important;
   border-radius: 0 !important; }
-  .wdm-enquiry-modal .contact-bottom {
+  .wdm-modal-content .contact-bottom {
     display: none; }
+  .wdm-modal-content .wdm-modal-title span {
+    display: none; }
+    .wdm-modal-content .wdm-modal-title span.pr_name {
+      display: block; }
+
+.wdm-modal-body {
+  padding: 20px 0; }
+
+.single-product .quote-form {
+  margin-bottom: 20px; }
 
 .ui-widget {
   font-family: "Work Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important; }

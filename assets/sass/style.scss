@@ -371,13 +371,25 @@ input.wpi-button {
     	background: darken($gray,5%) !important;
     }
 }
-.wdm-enquiry-modal {
+.wdm-modal-content {
 	font-size: 1.5em !important;
 	border: 0 !important;
 	border-radius: 0 !important;
 	.contact-bottom {
 		display: none;
 	}
+	.wdm-modal-title span {
+		display: none;
+		&.pr_name {
+			display: block;
+		}
+	}
+}
+.wdm-modal-body {
+	padding: 20px 0;
+}
+.single-product .quote-form {
+	margin-bottom: 20px;
 }
 .ui-widget {
 	font-family: $font-serif !important;
