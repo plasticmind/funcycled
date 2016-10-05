@@ -192,7 +192,7 @@ button.menu-toggle {
 	top: 33%;
 	width: 100%;
 	margin: 0 auto;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
@@ -474,12 +474,13 @@ p.no-comments {
 	background-position: bottom;
 }
 .hero-action {
+	width: auto;
 	text-align: left;
-	left:0;
-	top: 12%;
+	right:10%;
+	top: 10%;
 	a {
 		margin-left: 4vh;
-		padding: 3vh 8vh;
+		padding: 1.5vh 6vh;
 		box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2)
 	}
 }
