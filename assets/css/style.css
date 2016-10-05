@@ -291,7 +291,7 @@ input.wpi-button {
       display: block; }
 
 .wdm-modal-body {
-  padding: 20px 0; }
+  padding: 20px 0 10px !important; }
 
 .single-product .quote-form {
   margin-bottom: 20px; }
