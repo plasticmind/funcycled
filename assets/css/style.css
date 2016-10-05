@@ -43,6 +43,16 @@ button.menu-toggle {
   top: 2px;
   font-size: 80%; }
 
+.home header#masthead {
+  margin-bottom: 0 !important; }
+
+/*
+ * = Footer
+ */
+.site-footer em {
+  margin-top: 10px;
+  display: block; }
+
 /*
  * = Content
  */
@@ -76,6 +86,14 @@ button.menu-toggle {
 .dimensions {
   font-size: 1.2em; }
 
+.entry-meta {
+  border-top: dashed 1px #d1d2d6;
+  padding-top: 1em; }
+
+.nav-links a {
+  margin-right: 1em;
+  background: #fafafa; }
+
 /*
  * = Related
  */
@@ -93,7 +111,8 @@ button.menu-toggle {
   border-radius: 3px;
   padding: 15px;
   margin: 0 0 10px 0;
-  vertical-align: top; }
+  vertical-align: top;
+  clear: both; }
   .archive-list article .featured-image {
     margin: -16px -16px 15px -16px; }
   .archive-list article img {
@@ -106,6 +125,40 @@ button.menu-toggle {
   .archive-list article .summary {
     font-weight: normal;
     color: #43454b; }
+
+/*
+ * = Home Page
+ */
+.hero {
+  position: relative;
+  margin: 0 0 2em;
+  overflow: hidden;
+  position: relative; }
+
+.hero-image {
+  height: 35vw;
+  background-size: cover;
+  background-position: bottom; }
+
+.hero-action {
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center; }
+  .hero-action a {
+    padding: 2vh 8vh;
+    color: #43454b;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.25s; }
+    .hero-action a:hover {
+      background: rgba(255, 255, 255, 0.99); }
+
+.site-social a {
+  color: #d1d2d6; }
 
 /*
  * = Sidebar
@@ -133,26 +186,6 @@ button.menu-toggle {
   margin-top: 1em;
   text-align: center;
   font-size: 1.2em; }
-.about-widget .social-links {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  margin-top: 1.5em;
-  padding-top: 1.2em;
-  margin-bottom: 1em; }
-  .about-widget .social-links li {
-    display: inline-block;
-    width: 31%; }
-  .about-widget .social-links a {
-    text-decoration: none !important;
-    font-size: 3em;
-    width: 100%;
-    text-align: center;
-    transition: color 1s; }
-    .about-widget .social-links a span {
-      display: none; }
-    .about-widget .social-links a:hover {
-      transition: color 0.25s;
-      color: #28af90; }
 .about-widget .email-subscribe {
   margin-top: 2em; }
   .about-widget .email-subscribe p {
@@ -162,6 +195,31 @@ button.menu-toggle {
     color: #d1d2d6; }
     .about-widget .email-subscribe .field-holder input:focus {
       color: black; }
+.about-widget .social-links {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+
+.social-links {
+  margin-top: 1.5em;
+  padding: 1.2em 0;
+  margin-bottom: 1em; }
+  .social-links ul {
+    margin: 0;
+    padding: 0; }
+  .social-links li {
+    display: inline-block;
+    width: 31%; }
+  .social-links a {
+    text-decoration: none !important;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    transition: color 1s; }
+    .social-links a span {
+      display: none; }
+    .social-links a:hover {
+      transition: color 0.25s;
+      color: #28af90; }
 
 .page-about .welcome-text, .page-about .profile-image {
   display: none; }
@@ -272,16 +330,53 @@ p.no-comments {
       padding-left: 0.5em !important;
       padding-right: 0.5em !important; }
 
-  .home.page .site-header {
-    margin-bottom: 0 !important; }
-  .home.page .site-header .site-branding {
-    margin-bottom: 1.5em; }
+  .site-footer em {
+    margin-top: 0;
+    display: inline; }
+
+  /*
+   * = Home Page
+   */
   .home.page .content-area {
     width: 100%;
     float: none;
     margin-right: 0; }
-  .home.page .hero img {
+
+  .home header#masthead {
+    margin-bottom: 1em !important; }
+
+  .hero {
     width: 100%; }
+
+  .hero-image {
+    height: 50vh;
+    background-size: cover;
+    background-position: bottom; }
+
+  .hero-action {
+    text-align: left;
+    left: 0;
+    top: 12%; }
+    .hero-action a {
+      margin-left: 4vh;
+      padding: 3vh 8vh;
+      box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2); }
+
+  .site-summary,
+  .site-social {
+    float: left; }
+
+  .site-summary {
+    width: 70%;
+    margin-bottom: 2em;
+    padding: 1em 2em 0 0;
+    border-right: solid 1px #d1d2d6; }
+    .site-summary p {
+      font-size: 1.2rem;
+      padding: 0; }
+
+  .site-social {
+    width: 30%; }
 
   .storefront-primary-navigation {
     background: transparent;

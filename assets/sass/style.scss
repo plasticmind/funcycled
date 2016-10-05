@@ -70,6 +70,20 @@ button.menu-toggle {
 	top: 2px;
 	font-size: 80%;
 }
+.home header#masthead {
+  margin-bottom: 0 !important;
+}
+
+/*
+ * = Footer
+ */
+
+.site-footer {
+	em {
+		margin-top: 10px;
+		display: block;
+	}
+}
 
 /*
  * = Content
@@ -109,6 +123,14 @@ button.menu-toggle {
 .dimensions {
 	font-size: 1.2em;
 }
+.entry-meta {
+	border-top: dashed 1px $light-gray;
+	padding-top: 1em;
+}
+.nav-links a {
+	margin-right: 1em;
+	background: #fafafa;
+}
 
 /*
  * = Related
@@ -131,6 +153,7 @@ button.menu-toggle {
     padding: 15px;
     margin: 0 0 10px 0;
     vertical-align: top;
+    clear: both;
     .featured-image {
     	margin: -16px -16px 15px -16px;
     }
@@ -149,6 +172,46 @@ button.menu-toggle {
     }
 }
 
+/*
+ * = Home Page
+ */
+
+.hero {
+	position: relative;
+	margin: 0 0 2em;
+	overflow: hidden;
+	position: relative;
+}
+.hero-image {
+	height: 35vw;
+	background-size: cover;
+	background-position: bottom;
+}
+.hero-action {
+	position: absolute;
+	top: 33%;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	a {
+		padding: 2vh 8vh;			
+		color: $gray;
+		background: rgba(255,255,255,0.9);
+		transition: all 0.25s;
+
+		&:hover {
+			background: rgba(255,255,255,0.99);
+			//box-shadow: 0 1px 10px 3px $gray;
+
+		}
+	}
+}
+.site-social a {
+		color: $light-gray;
+}
 /*
  * = Sidebar
  */
@@ -185,31 +248,7 @@ button.menu-toggle {
 		text-align: center;
 		font-size: 1.2em;
 	}
-	.social-links {
-		border-top: 1px solid rgba(0,0,0,.05);
-		border-bottom: 1px solid rgba(0,0,0,.05);
-		margin-top: 1.5em;
-		padding-top: 1.2em;
-		margin-bottom: 1em;
-		li {
-			display: inline-block;
-			width: 31%;
-		}
-		a {
-			text-decoration: none !important;
-			font-size: 3em;
-			width: 100%;
-			text-align: center;
-			transition: color 1s;
-			span {
-				display: none;
-			}
-			&:hover {
-				transition: color 0.25s;
-				color: $brand-blue;
-			}
-		}
-	}
+
 	.email-subscribe {
 		margin-top: 2em;
 		p {
@@ -223,7 +262,37 @@ button.menu-toggle {
 			}
 		}
 	}
-		
+	.social-links {
+		border-top: 1px solid rgba(0,0,0,.05);
+		border-bottom: 1px solid rgba(0,0,0,.05);
+	}
+}
+.social-links {
+	margin-top: 1.5em;
+	padding: 1.2em 0;
+	margin-bottom: 1em;
+	ul {
+		margin:0;
+		padding:0;
+	}
+	li {
+		display: inline-block;
+		width: 31%;
+	}
+	a {
+		text-decoration: none !important;
+		font-size: 3em;
+		width: 100%;
+		text-align: center;
+		transition: color 1s;
+		span {
+			display: none;
+		}
+		&:hover {
+			transition: color 0.25s;
+			color: $brand-blue;
+		}
+	}
 }
 .page-about .welcome-text, .page-about .profile-image {
 	display: none;
@@ -372,21 +441,64 @@ p.no-comments {
 		}
 	} 
 }
-.home.page {
-	.site-header {
-		margin-bottom:0 !important;
+
+.site-footer {
+	em {
+		margin-top: 0;
+		display: inline;
 	}
-	.site-header .site-branding {
-   		margin-bottom: 1.5em;
-  	}
+}
+
+/*
+ * = Home Page
+ */
+
+.home.page {
   	.content-area {
   		width: 100%;
   		float: none;
   		margin-right: 0;
   	}
-  	.hero img {
-		width: 100%;
-  	}
+
+}
+.home header#masthead {
+  margin-bottom: 1em !important;
+}
+
+.hero {
+	width: 100%;
+}
+.hero-image {
+	height: 50vh;
+	background-size: cover;
+	background-position: bottom;
+}
+.hero-action {
+	text-align: left;
+	left:0;
+	top: 12%;
+	a {
+		margin-left: 4vh;
+		padding: 3vh 8vh;
+		box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2)
+	}
+}
+.site-summary,
+.site-social {
+	float: left;
+}
+.site-summary {
+	width: 70%;
+	margin-bottom: 2em;
+	padding: 1em 2em 0 0;
+	border-right: solid 1px $light-gray;
+	p {
+		font-size: 1.2rem;
+		padding: 0;
+	}
+}
+.site-social {
+	width: 30%;
 }
 
 .storefront-primary-navigation {
@@ -475,6 +587,8 @@ ul.products {
 .navigation {
 	clear: both;
 }
+
+
 
 }
 
