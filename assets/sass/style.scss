@@ -407,6 +407,9 @@ p.no-comments {
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
 }
+#comments .comment-list .comment-content .comment-text {
+    background-color:#f8f8f8 !important;
+}
 
 /*
  * = Responsive Breakpoints
