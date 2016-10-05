@@ -98,6 +98,9 @@ button.menu-toggle {
   margin-right: 1em;
   background: #fafafa; }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+  background-color: #28af90 !important; }
+
 /*
  * = Related
  */

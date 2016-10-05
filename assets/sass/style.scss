@@ -79,6 +79,8 @@ button.menu-toggle {
 	background-color:#f8f8f8 !important;
 }
 
+
+
 /*
  * = Footer
  */
@@ -135,6 +137,10 @@ button.menu-toggle {
 .nav-links a {
 	margin-right: 1em;
 	background: #fafafa;
+}
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+    background-color: #28af90 !important;
 }
 
 /*
