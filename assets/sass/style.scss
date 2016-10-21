@@ -90,6 +90,22 @@ button.menu-toggle {
 		margin-top: 10px;
 		display: block;
 	}
+	.col-full {
+		position: relative;
+	}
+	.footer-promo {
+			width: 300px;
+			text-align: center;
+		span {
+			text-transform: uppercase;
+			font-size: 11px;
+			color: $brand-blue;
+		}
+		img {
+			border-radius: 0;
+			width: 300px;
+		}
+	}
 }
 
 /*
@@ -472,6 +488,13 @@ p.no-comments {
 	em {
 		margin-top: 0;
 		display: inline;
+	}
+	.footer-promo {
+		position: absolute;
+		top: 0;
+		right: 40px;
+		float: right;
+		width: 80px;
 	}
 }
 

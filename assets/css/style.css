@@ -56,6 +56,18 @@ button.menu-toggle {
 .site-footer em {
   margin-top: 10px;
   display: block; }
+.site-footer .col-full {
+  position: relative; }
+.site-footer .footer-promo {
+  width: 300px;
+  text-align: center; }
+  .site-footer .footer-promo span {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #28af90; }
+  .site-footer .footer-promo img {
+    border-radius: 0;
+    width: 300px; }
 
 /*
  * = Content
@@ -353,6 +365,12 @@ p.no-comments {
   .site-footer em {
     margin-top: 0;
     display: inline; }
+  .site-footer .footer-promo {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    float: right;
+    width: 80px; }
 
   /*
    * = Home Page

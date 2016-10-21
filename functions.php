@@ -65,6 +65,13 @@ function pm_storefront_credit() {
 
 		&nbsp;&nbsp;&nbsp; &copy; <?php echo get_bloginfo( 'name' ) . ' 2012-' . date( 'Y' ); ?> &nbsp;&nbsp;&nbsp; <em>Ilium fuit, Troja est.</em>
 	</div><!-- .site-info -->
+	<div class="footer-promo">
+		<a title="Winners of Flea Market Flip" href="/funcycled-news/what-its-like-being-on-flea-market-flip-part-1/" target="_blank">
+			<span>Winners of</span>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/flea-market-flip.png">
+		</a>
+	</div>
+
 	<?php
 }
 
