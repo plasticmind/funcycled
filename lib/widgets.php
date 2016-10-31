@@ -30,7 +30,7 @@ class About extends WP_Widget {
         echo '<div class="about-widget widget">';
         if ( !empty( $welcome_text ) || isset($show_image) ) { 
             if ( $show_image ) { 
-                echo '<div class="profile-image"><a href="'. get_bloginfo('url').'/about/"><img src="'.get_stylesheet_directory_uri().'/assets/images/sarah-profile.jpg" height="230" width="230" alt="Sarah Trop" nopin="nopin"></a></div>';
+                echo '<div class="profile-image"><a href="'. get_bloginfo('url').'/about/"><img src="'.get_stylesheet_directory_uri().'/assets/images/sarah-profile.jpg?v=2" height="230" width="230" alt="Sarah Trop" nopin="nopin"></a></div>';
             };
             echo '<div class="welcome-text">';
             if ( !empty( $title ) ) { 
