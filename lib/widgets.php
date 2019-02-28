@@ -53,6 +53,9 @@ class About extends WP_Widget {
 
         if ( $show_subscribe ) { ?>
 
+            <?php echo do_shortcode("[mc4wp_form id='15039']"); ?>
+
+<?php /*
             <div class="email-subscribe">
                 <p>Get some fun in your inbox! 🎉</p>
                 <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=FunCycled', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" class="form-subscribe">
@@ -62,6 +65,7 @@ class About extends WP_Widget {
                     <input type="submit" value="Subscribe" style="display:none"/>
                 </form>
             </div>
+*/?>
 
         <?php }
         echo '</div>';
