@@ -9,6 +9,8 @@ var msnry = new Masonry( elem, {
 });
 */
 
+jQuery( ".storefront-sorting:eq(1)" ).css( "clear", "both" );
+
 jQuery('.archive-list').masonry({
   // options
   itemSelector: 'article'
