@@ -288,6 +288,18 @@ button.menu-toggle {
 				color: black;
 			}
 		}
+		input {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+		input[name="FNAME"], 
+		input[name="LNAME"] {
+			font-size: 10px;
+		    width: calc(50% - 5px);
+		}
+		input[name="FNAME"] {
+			margin-right: 1px;
+		}
 	}
 	.social-links {
 		border-top: 1px solid rgba(0,0,0,.05);
