@@ -10,12 +10,8 @@
  * as the sf_child_theme_dequeue_style() function declaration.
  */
 
-
-/**
- * Load widget
- */
-
-require_once ( get_stylesheet_directory() . '/lib/widgets.php' );
+require_once ( get_stylesheet_directory() . '/lib/widgets.php' ); // Custom widgets
+require_once ( get_stylesheet_directory() . '/lib/post-types.php' ); // Custom post types
 
 /**
  * Replace Storefront parent theme Google fonts with custom child theme fonts
@@ -165,7 +161,7 @@ function pm_remove_storefront_sidebar() {
     remove_action( 'storefront_sidebar', 'storefront_get_sidebar', 10 );
     }
 }
-add_action( 'get_header', 'pm_remove_storefront_sidebar' );
+// add_action( 'get_header', 'pm_remove_storefront_sidebar' );
 
 /**
  * Adjust # of results on archive pages
