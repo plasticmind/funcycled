@@ -72,7 +72,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<content:encoded>
-					<![CDATA[<?php echo the_excerpt_rss(); echo $postlink; ?>]]>
+					<![CDATA[<?php echo '<a href="'.get_the_permalink().'">' . $postimage . '</a><br><br>'; the_excerpt_rss(); echo $postlink; ?>]]>
 				</content:encoded>
 			</item>
 
