@@ -60,6 +60,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 		<!-- Start loop -->
 		<?php while( have_posts() ) : the_post(); ?>
 
+			<?php $content_arr = get_extended ( $post->post_content ); ?>
 			<item>
 				<title><?php the_title_rss(); ?></title>
 				<link><?php the_permalink_rss(); ?></link>
@@ -72,7 +73,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<content:encoded>
-					<![CDATA[<?php echo '<br><br><a href="'.get_the_permalink().'"><img src="' . $postimage . '" alt="' . get_the_title_rss() . '"></a><br><br>'; the_excerpt_rss(); echo $postlink; ?>]]>
+					<![CDATA[<?php echo '<br><br><a href="'.get_the_permalink().'"><img src="' . $postimage . '" alt="' . get_the_title_rss() . '"></a><br><br>' . $content_arr['main'] . $postlink; ?>]]>
 				</content:encoded>
 			</item>
 
