@@ -14,7 +14,7 @@
 header( 'Content-Type: ' . feed_content_type( 'rss-http' ) . '; charset=' . get_option( 'blog_charset' ), true );
 $frequency  = 1;        // Default '1'. The frequency of RSS updates within the update period.
 $duration   = 'hourly'; // Default 'hourly'. Accepts 'hourly', 'daily', 'weekly', 'monthly', 'yearly'.
-$postlink   = '<br><br><a href="' . get_permalink() . '">Continue reading '.get_the_title().' →</a><br>';
+$postlink   = '<br><br><a href="' . get_permalink() . '">Continue reading '.get_the_title().' →</a>';
 $email      = get_the_author_meta( 'email');
 $author     = get_the_author();
 $postimages = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
