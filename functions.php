@@ -325,16 +325,6 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-function insertThumbnailRSS($content) {
-global $post;
-if ( has_post_thumbnail( $post->ID ) ){
-$content = '<p><a href="'.get_the_permalink().'">' . get_the_post_thumbnail( $post->ID, 'large' ) . '</a></p>' . $content . '<p><a href="'.get_the_permalink().'">Read the full article...</a></p>';
-}
-return $content;
-}
-
-add_filter('the_excerpt_rss', 'insertThumbnailRSS');
-add_filter('the_content_feed', 'insertThumbnailRSS');
 
 /**
  * Deal with the custom RSS templates.
