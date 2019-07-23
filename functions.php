@@ -321,10 +321,14 @@ add_filter( 'body_class', 'pm_add_slug_body_class' );
  * Register custom RSS template.
  */
 function custom_excerpt_length( $length ) {
-	return 140;
+	return 200;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+function wpse_excerpt_more( $more ) {
+    return '…';
+}
+add_filter( 'excerpt_more', 'wpse_excerpt_more' );
 
 /**
  * Deal with the custom RSS templates.
