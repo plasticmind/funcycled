@@ -14,12 +14,12 @@
 header( 'Content-Type: ' . feed_content_type( 'rss-http' ) . '; charset=' . get_option( 'blog_charset' ), true );
 $frequency  = 1;        // Default '1'. The frequency of RSS updates within the update period.
 $duration   = 'hourly'; // Default 'hourly'. Accepts 'hourly', 'daily', 'weekly', 'monthly', 'yearly'.
-$postlink   = '<br /><a href="' . get_permalink() . '">See the rest of the story at mysite.com</a><br /><br />';
+$postlink   = '<br /><a href="' . get_permalink() . '">Continue reading '.get_the_title().' →</a><br /><br />';
 $email      = get_the_author_meta( 'email');
 $author     = get_the_author();
 $postimages = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
 // Check for post image. If none, fallback to a default.
-$postimage = ( $postimages ) ? $postimages[0] : get_stylesheet_directory_uri() . '/images/default.jpg';
+$postimage = ( $postimages ) ? $postimages[0] : get_stylesheet_directory_uri() . '/assets/images/funcycled-feed.jpg';
 /**
  * Start RSS feed.
  */
@@ -37,7 +37,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 	<!-- RSS feed defaults -->
 	<channel>
-		<title><?php bloginfo_rss( 'name' ); wp_title_rss(); ?> — TEST</title>
+		<title><?php bloginfo_rss( 'name' ); wp_title_rss(); ?></title>
 		<link><?php bloginfo_rss( 'url' ) ?></link>
 		<description><?php bloginfo_rss( 'description' ) ?></description>
 		<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_lastpostmodified( 'GMT' ), false ); ?></lastBuildDate>
@@ -48,7 +48,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 		<!-- Feed Logo (optional) -->
 		<image>
-			<url>http://mysite.com/somelogo.png</url>
+			<url><?php echo get_stylesheet_directory_uri() . '/assets/images/funcycled-feed.jpg' ?></url>
 			<title>
 				<?php bloginfo_rss( 'description' ) ?>
 			</title>
@@ -72,7 +72,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<content:encoded>
-					<![CDATA[<?php echo the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]>
+					<![CDATA[<?php echo the_excerpt_rss(); echo $postlink; ?>]]>
 				</content:encoded>
 			</item>
 
