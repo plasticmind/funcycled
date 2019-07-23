@@ -14,7 +14,7 @@
 header( 'Content-Type: ' . feed_content_type( 'rss-http' ) . '; charset=' . get_option( 'blog_charset' ), true );
 $frequency  = 1;        // Default '1'. The frequency of RSS updates within the update period.
 $duration   = 'hourly'; // Default 'hourly'. Accepts 'hourly', 'daily', 'weekly', 'monthly', 'yearly'.
-$postlink   = '<br><br><a href="' . get_permalink() . '">Continue reading '.get_the_title().' →</a><br><br>';
+$postlink   = '<br><br><a href="' . get_permalink() . '">Continue reading '.get_the_title().' →</a><br>>';
 $email      = get_the_author_meta( 'email');
 $author     = get_the_author();
 $postimages = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
@@ -73,7 +73,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<content:encoded>
-					<![CDATA[<?php echo '<br><br><a href="'.get_the_permalink().'"><img src="' . $postimage . '" alt="' . get_the_title_rss() . '"></a><br><br>' . $content_arr['main'] . $postlink; ?>]]>
+					<![CDATA[<?php echo '<br><a href="'.get_the_permalink().'"><img src="' . $postimage . '" alt="' . get_the_title_rss() . '"></a><br>' . $content_arr['main'] . $postlink; ?>]]>
 				</content:encoded>
 			</item>
 
