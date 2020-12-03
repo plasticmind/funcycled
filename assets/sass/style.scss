@@ -37,6 +37,9 @@ body,button,input,select,textarea{
 	font-family:$font-serif;
 }
 
+svg { transition: fill 0.75s; }
+svg:hover { transition: fill 0.25s; }
+
 /*
  * = Header
  */
@@ -105,6 +108,21 @@ button.menu-toggle {
 			border-radius: 0;
 			width: 240px;
 		}
+	}
+}
+
+.site-info {
+	display: flex;
+	align-items: center;
+  a {
+		flex-basis: 36px;
+	}
+	svg {
+		max-height: 36px;
+		fill: $gray;
+	}
+	svg:hover {
+		fill: $brand-blue;
 	}
 }
 
@@ -514,21 +532,6 @@ p.no-comments {
 		right: 40px;
 		float: right;
 		width: 80px;
-	}
-}
-
-.site-info {
-	display: flex;
-	align-items: center;
-  a {
-		flex-basis: 36px;
-	}
-	svg {
-		max-height: 36px;
-		fill: $gray;
-	}
-	svg:hover {
-		fill: $brand-blue;
 	}
 }
 
