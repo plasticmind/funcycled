@@ -332,6 +332,13 @@ button.menu-toggle {
 			color: $brand-blue;
 		}
 	}
+	svg {
+		max-height: 60px;
+		fill: $gray;
+	}
+	svg:hover {
+		fill: $brand-blue;
+	}
 }
 .page-about .welcome-text, .page-about .profile-image {
 	display: none;
@@ -507,6 +514,21 @@ p.no-comments {
 		right: 40px;
 		float: right;
 		width: 80px;
+	}
+}
+
+.site-info {
+	display: flex;
+	align-items: center;
+  a {
+		flex-basis: 36px;
+	}
+	svg {
+		max-height: 36px;
+		fill: $gray;
+	}
+	svg:hover {
+		fill: $brand-blue;
 	}
 }
 
