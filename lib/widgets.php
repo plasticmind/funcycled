@@ -23,14 +23,15 @@ class About extends WP_Widget {
 
         $title = apply_filters('widget_title', $instance['title'] );
         $welcome_text = $instance['welcome_text'];
+        $avatar_url = $instance['avatar_url'];
         $show_image = isset( $instance['show_image'] ) ? $instance['show_image'] : false;
         $show_social = isset( $instance['show_social'] ) ? $instance['show_social'] : false;
         $show_subscribe = isset( $instance['show_subscribe'] ) ? $instance['show_subscribe'] : false;
 
         echo '<div class="about-widget widget">';
         if ( !empty( $welcome_text ) || isset($show_image) ) { 
-            if ( $show_image ) { 
-                echo '<div class="profile-image"><a href="'. get_bloginfo('url').'/about/"><img src="'.get_stylesheet_directory_uri().'/assets/images/sarah-profile.jpg?v=2" height="230" width="230" alt="Sarah Trop" nopin="nopin"></a></div>';
+            if ( !empty( $avatar_url ) && $show_image ) { 
+                echo '<div class="profile-image"><a href="'. get_bloginfo('url').'/about/"><img src="'.$avatar_url.'" height="230" width="230" alt="Sarah Trop" nopin="nopin"></a></div>';
             };
             echo '<div class="welcome-text">';
             if ( !empty( $title ) ) { 
@@ -75,6 +76,7 @@ class About extends WP_Widget {
         $instance = $old_instance;
         $instance['title'] = strip_tags( $new_instance['title'] );
         $instance['welcome_text'] = $new_instance['welcome_text'];
+        $instance['avatar_url'] = $new_instance['avatar_url'];
         $instance['show_image'] = $new_instance['show_image'];
         $instance['show_social'] = $new_instance['show_social'];
         $instance['show_subscribe'] = $new_instance['show_subscribe'];
@@ -96,6 +98,12 @@ class About extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id( 'welcome_text' ); ?>"><?php _e('Welcome Text:', 'example'); ?></label>
             <textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('welcome_text'); ?>" name="<?php echo $this->get_field_name('welcome_text'); ?>"><?php echo $instance['welcome_text']; ?></textarea>
+        </p>
+
+        <!-- Profile picture: Text input -->
+        <p>
+            <label for="<?php echo $this->get_field_id( 'avatar_url' ); ?>"><?php _e('Profile Picture URL:', 'example'); ?></label>
+            <input id="<?php echo $this->get_field_id( 'avatar_url' ); ?>" name="<?php echo $this->get_field_name( 'avatar_url' ); ?>" value="<?php echo $instance['avatar_url']; ?>" style="width:100%;" />
         </p>
 
         <!-- Show Image? Checkbox -->
