@@ -47,11 +47,11 @@ svg:hover { transition: fill 0.25s; }
 .site-header .site-branding {
 	width: 180px;
 	.site-title a {
-		height: 45px;
+		height: 103px;
 		width: 180px;
 		display: block;
 		text-indent: -999em;
-		background: transparent url(#{$theme_path}assets/images/logo-color.svg) no-repeat top left;
+		background: transparent url(#{$theme_path}assets/images/funcycled-logo-badge.svg) no-repeat top left;
 		background-size: cover;
 	}
 	.site-description {
@@ -504,11 +504,11 @@ p.no-comments {
 		background-color: transparent;
 		width: 270px;
 		.site-title a {
-			height: 68px;
+			height: 154px;
 			width: 270px;
 			display: block;
 			text-indent: -999em;
-			background: transparent url(#{$theme_path}assets/images/logo-color.svg) no-repeat top left;
+			background: transparent url(#{$theme_path}assets/images/funcycled-logo-badge.svg) no-repeat top left;
 			background-size: cover;
 		}
 	}	
